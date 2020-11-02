@@ -1,15 +1,12 @@
 import React, { Component } from "react";
+import Header from "../../components/Header/Header";
 import './Dashboard.css'
 
 export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        <header>
-          <h2>SafeRes</h2>
-          <h1>restaurant name</h1>
-          <div>menu</div>
-        </header>
+        <Header />
         <main>
           <section class="analytics">more analytics?</section>
           <section class="emergency">

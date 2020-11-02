@@ -6,7 +6,7 @@ export default class LoginPage extends Component {
     render() {
         return (
             <div className='login_page'>
-                <header>
+                <header className='login_header'>
                     <h1>SafeRes</h1>
                 </header>
                 <main>
@@ -18,15 +18,15 @@ export default class LoginPage extends Component {
                         <input id='password' name='password' type='password' />
                         <button>Submit</button>
                     </form>
-                <div className='demo_creds'>
-                    Demo account Creds
+                    <div className='demo_creds'>
+                        Demo account Creds
                 </div>
-            </main>
-            <footer>
-                <div>
-                    contact
+                </main>
+                <footer>
+                    <div>
+                        contact
                 </div>
-            </footer>
+                </footer>
             </div>
         )
     }

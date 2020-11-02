@@ -1,0 +1,11 @@
+.main_header {
+    background-color: darkgray;
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main_header h1 h2 {
+    margin: 0;
+}
