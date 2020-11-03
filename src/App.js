@@ -6,11 +6,9 @@ import Dashboard from "./routes/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path={'/'} component={LoginPage} />
-        <Route path={'/reservations'} component={ReservationPage} />
-        <Route path={'/dashboard'} component={Dashboard} />
-      </Switch>
+      <Route exact path={'/'} component={LoginPage} />
+      <Route path={'/reservations'} component={ReservationPage} />
+      <Route path={'/dashboard'} component={Dashboard} />
     </div>
   );
 }

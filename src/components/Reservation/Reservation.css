@@ -2,4 +2,39 @@
     background-color: lightgray;
     margin: 5px;
     padding: 15px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 100px;
+}
+
+.time_block {
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+    flex: 0 1 500px;
+    margin: 5px;
+}
+
+.fa_bell {
+    margin: 0 1rem;
+}
+
+.res_name {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.res_party {
+    grid-column: 2;
+    justify-self: start;
+}
+
+.res_notes {
+    grid-column: 3;
+    justify-self: start;
+}
+
+.fa_icons {
+    grid-column: 4;
+    justify-self: flex-end;
 }
