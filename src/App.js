@@ -4,7 +4,7 @@ import LoginPage from "./routes/LoginPage/LoginPage";
 import Dashboard from "./routes/Dashboard/Dashboard";
 import EditResPage from "./routes/EditResPage/EditResPage";
 
-function App() {
+export default function App() {
 
   return (
     <div className="App">
@@ -15,5 +15,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

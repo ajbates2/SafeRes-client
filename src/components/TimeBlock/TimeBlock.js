@@ -1,4 +1,4 @@
-import ResiList from "../ResiList/ResiList"
+import Reservation from "../Reservation/Reservation"
 import './TimeBlock.css'
 
 export default function TimeBlock(props) {
@@ -15,10 +15,18 @@ export default function TimeBlock(props) {
         return (
             <ul className='time_block' key={block.time}>
                 <p>{block.time}</p>
-                <ResiList
-                    resi={props.resi}
-                    time={block.time}
-                />
+                {props.resi.map(res => {
+                    if (res.time === block.time) {
+                        return (
+                            <Reservation
+                                key={res.id}
+                                {...res}
+                            />
+                        )
+                    }
+                    else return null
+                }
+                )}
             </ul>
         )
     })

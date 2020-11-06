@@ -1,8 +1,6 @@
-.editRes_form {
-    background: gray;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-gap: 16px;
-    margin: 0 auto;
-    width: fit-content;
+.editRes_form input {
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
