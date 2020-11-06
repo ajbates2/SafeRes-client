@@ -14,7 +14,7 @@ export default function EditResForm(props) {
             <input type='number' name='partySize' defaultValue={props.partySize} />
             <input type='tel' name='phoneNumber' defaultValue={props.phoneNumber} />
             <input type='text' name='notes' defaultValue={props.notes} />
-            <input type='button' value='submit' onClick={() => props.changeView()} />
+            <input type='button' value='update' onClick={() => props.changeView()} />
         </form>
     )
 }
