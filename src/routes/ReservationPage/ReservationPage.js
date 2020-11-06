@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../../components/Header/Header";
-import Reservation from "../../components/Reservation/Reservation";
+import TimeBlock from "../../components/TimeBlock/TimeBlock";
 import Store from "../../Store";
 import './ReservationPage.css'
 
-export default class ReservationPage extends Component {
+export default function ReservationPage(props) {
 
-  render() {
-    return (
-      <div className="res_page">
-        <Header />
-        <main className="reservations">
-          <Reservation resi={Store} />
-        </main>
-      </div>
-    );
-  }
+  return (
+    <div className="res_page">
+      <Header />
+      <main className="reservations">
+        <TimeBlock resi={Store} resId={props.match.params.id} />
+      </main>
+    </div>
+  );
 }

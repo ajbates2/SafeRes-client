@@ -1,0 +1,8 @@
+.editRes_form {
+    background: gray;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+    margin: 0 auto;
+    width: fit-content;
+}

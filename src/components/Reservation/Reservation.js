@@ -1,42 +1,61 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Component } from 'react'
+import EditRes from '../EditRes/EditRes'
 import './Reservation.css'
 
-export default function Reservation(props) {
-    const resList = time => props.resi.map(res => {
-        if (time === res.time) {
+export default class Reservation extends Component {
+    static defaultProps = {
+        name: '',
+        id: 0,
+        partySize: 0,
+        notes: '',
+        phoneNumber: 0,
+    }
+
+    state = {
+        selected: false
+    }
+
+
+    onClick = () => {
+        this.setState(prev => ({
+            selected: !prev.selected
+        }))
+    }
+
+    onSubmit = ev => {
+        ev.preventDefault()
+        this.setState(prev => ({
+            selected: !prev.selected
+        }))
+    }
+
+    render() {
+        if (!this.state.selected) {
             return (
-                <li className="res_block" key={res.id}>
-                    <span className='res_name'>{res.name} </span>
-                    <span className='res_party'>{res.partySize} ppl</span>
-                    <span className='res_notes'>{res.notes}</span>
+                <li className="res_block" key={this.props.id}>
+                    <span className='res_name'>{this.props.name}</span>
+                    <span className='res_party'>{this.props.partySize} ppl</span>
+                    <span className='res_notes'>{this.props.notes}</span>
                     <span className='fa_icons'>
-                        <FontAwesomeIcon icon='edit' className='fa_edit' />
+                        <FontAwesomeIcon
+                            icon='edit'
+                            className='fa_edit'
+                            onClick={() => this.onClick()}
+                        />
                         <FontAwesomeIcon icon='bell' className='fa_bell' />
                         <FontAwesomeIcon icon='check-square' className='fa_check_box' />
                     </span>
                 </li>
             )
         }
-        else return null
-    })
-
-    const dedupeByKey = (arr, key) => {
-        const temp = arr.map(el => el[key])
-        return arr.filter((el, i) =>
-            temp.indexOf(el[key]) === i
-        )
+        else {
+            return (
+                <EditRes
+                    onSubmit={this.onSubmit}
+                    {...this.props}
+                />
+            )
+        }
     }
-
-    const shortenedList = dedupeByKey(props.resi, 'time')
-
-    const blockList = shortenedList.map(block => {
-        return (
-            <ul className='time_block' key={block.time}>
-                <p>{block.time}</p>
-                {resList(block.time)}
-            </ul>
-        )
-    })
-
-    return blockList
 }

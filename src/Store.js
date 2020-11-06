@@ -2,7 +2,7 @@ const Store = [
     {
         "id": 1,
         "time": "4:00 pm",
-        "name": "John Doe",
+        "name": "John",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "booth"
@@ -10,7 +10,7 @@ const Store = [
     {
         "id": 2,
         "time": "4:00 pm",
-        "name": "John Doe",
+        "name": "Jane",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "bar"
@@ -18,7 +18,7 @@ const Store = [
     {
         "id": 3,
         "time": "5:00 pm",
-        "name": "John Doe",
+        "name": "Jeff",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "low-top"
@@ -26,7 +26,7 @@ const Store = [
     {
         "id": 4,
         "time": "5:00 pm",
-        "name": "John Doe",
+        "name": "Jeb",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "bar if possible"
@@ -34,7 +34,7 @@ const Store = [
     {
         "id": 5,
         "time": "5:30 pm",
-        "name": "John Doe",
+        "name": "Jordan",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "bar if possible"
@@ -42,7 +42,7 @@ const Store = [
     {
         "id": 6,
         "time": "6:00 pm",
-        "name": "John Doe",
+        "name": "Johnathon",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "bar if possible"
@@ -50,7 +50,7 @@ const Store = [
     {
         "id": 7,
         "time": "6:00 pm",
-        "name": "John Doe",
+        "name": "Joffrey",
         "phoneNumber": "612-123-4567",
         "partySize": 2,
         "notes": "bar if possible"
