@@ -30,3 +30,7 @@
 .waiting {
     background-color: lightblue;
 }
+
+.notified {
+    background-color: lightgreen;
+}

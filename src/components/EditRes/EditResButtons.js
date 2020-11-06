@@ -26,11 +26,15 @@ export default function EditResButtons(props) {
             <FontAwesomeIcon
                 icon='bell'
                 className='fa_notify'
+                onClick={() => {
+                    props.setNotifiedState()
+                    props.changeView()
+                }}
             />
             <FontAwesomeIcon
                 icon='check'
                 className='fa_checkOff'
-                onClick={() => { props.checkOff() }}
+                onClick={() => props.checkOff()}
             />
         </div>
     )

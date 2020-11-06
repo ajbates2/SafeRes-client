@@ -1,4 +1,5 @@
 import React from "react";
+import AddResButton from "../../components/AddRes/AddResButton";
 import Header from "../../components/Header/Header";
 import TimeBlock from "../../components/TimeBlock/TimeBlock";
 import Store from "../../Store";
@@ -27,6 +28,7 @@ export default function ReservationPage(props) {
           )
         })}
       </main>
+      <AddResButton />
     </div>
   );
 }

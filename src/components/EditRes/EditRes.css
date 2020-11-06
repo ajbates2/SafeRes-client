@@ -11,10 +11,10 @@
     grid-column: 1;
 }
 
-.editRes_form input {
+.res_form input {
     padding: 10px;
     width: -webkit-fill-available;
-    margin: 5px;
+    margin: 7px;
     border: 0;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
@@ -57,6 +57,7 @@
     justify-self: center;
     align-self: center;
     padding: 15px;
+    
 }
 
 .editRes_waitState {

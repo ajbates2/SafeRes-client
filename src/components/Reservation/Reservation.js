@@ -8,10 +8,16 @@ export default function Reservation(props) {
     const [editView, setEditView] = useState(false)
     const [checkOff, setCheckOff] = useState(false)
     const [waitState, setWaitState] = useState(false)
+    const [notifiedState, setNotifiedState] = useState(false)
 
     if (!editView && !checkOff) {
         return (
-            <li className={`res_block ${!waitState ? '' : 'waiting'}`} key={props.id}>
+            <li
+                className=
+                {`res_block ${!waitState ? '' : 'waiting'} 
+                    ${!notifiedState ? '' : 'notified'}`}
+                key={props.id}
+            >
                 <span className='res_name'>{props.name}</span>
                 <span className='res_party'>{props.partySize} ppl</span>
                 <span className='res_notes'>{props.notes}</span>
@@ -31,6 +37,7 @@ export default function Reservation(props) {
                 changeView={() => setEditView(!editView)}
                 checkOff={() => setCheckOff(!checkOff)}
                 setWaitState={() => setWaitState(!waitState)}
+                setNotifiedState={() => setNotifiedState(!notifiedState)}
                 {...props}
             />
         )

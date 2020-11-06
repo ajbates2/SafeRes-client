@@ -4,15 +4,14 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCheckSquare, faBell, faEdit, faEllipsisH, faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faEllipsisH, faTimes, faPlusSquare, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-  faCheckSquare,
   faBell,
-  faEdit,
   faEllipsisH,
   faTimes,
-  faCheck,
+  faPlusSquare,
+  faCheck
 )
 
 ReactDOM.render(
