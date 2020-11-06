@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 10px;
 }
 
 .main_header h1 h2 {

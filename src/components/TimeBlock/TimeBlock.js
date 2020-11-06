@@ -2,21 +2,13 @@ import Reservation from "../Reservation/Reservation"
 import './TimeBlock.css'
 
 export default function TimeBlock(props) {
-    const dedupeByKey = (arr, key) => {
-        const temp = arr.map(el => el[key])
-        return arr.filter((el, i) =>
-            temp.indexOf(el[key]) === i
-        )
-    }
 
-    const shortenedList = dedupeByKey(props.resi, 'time')
-
-    const blockList = shortenedList.map(block => {
-        return (
-            <ul className='time_block' key={block.time}>
-                <p>{block.time}</p>
+    return (
+        <div className='timeBlock_container'>
+            <p className='timeBlock_title'>{props.time}</p>
+            <ul className='timeBlock_list' key={props.time}>
                 {props.resi.map(res => {
-                    if (res.time === block.time) {
+                    if (res.time === props.time) {
                         return (
                             <Reservation
                                 key={res.id}
@@ -28,8 +20,6 @@ export default function TimeBlock(props) {
                 }
                 )}
             </ul>
-        )
-    })
-
-    return blockList
+        </div>
+    )
 }

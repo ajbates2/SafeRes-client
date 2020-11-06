@@ -1,7 +1,16 @@
-.time_block {
+.timeBlock_container {
     background-color: gray;
-    text-align: center;
     padding: 20px;
     flex: 0 1 500px;
-    margin: 5px;
+    margin: 10px;
+}
+
+.timeBlock_list {
+    margin: 10px;
+    padding: 0;
+}
+
+.timeBlock_title {
+    margin: 10px;
+    padding: 10px;
 }

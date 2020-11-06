@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './LoginPage.css'
 
 export default function LoginPage() {
@@ -15,7 +16,7 @@ export default function LoginPage() {
                     <input id='username' name='password' type='text' />
                     <label htmlFor='password'>password</label>
                     <input id='password' name='password' type='password' />
-                    <button>Submit</button>
+                    <button><Link to='/reservations'>Submit</Link></button>
                 </form>
                 <div className='demo_creds'>
                     Demo account Creds
