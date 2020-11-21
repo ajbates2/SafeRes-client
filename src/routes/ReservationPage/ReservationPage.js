@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AddResButton from "../../components/AddRes/AddResButton";
 import Header from "../../components/Header/Header";
 import TimeBlock from "../../components/TimeBlock/TimeBlock";
+import ResiContext from "../../contexts/reservationContext";
+import SafeResAPIService from "../../services/res-api-service";
 import Store from "../../Store";
 import './ReservationPage.css'
 
 export default function ReservationPage(props) {
+  const [resList, setResList] = useState([])
+
+  const getReservations = () => {
+    return SafeResAPIService.getAllCurrentResi()
+      .then(data => console.log(data))
+  }
+
+  useEffect(() => {
+    getReservations()
+  })
+
   const dedupeByKey = (arr, key) => {
     const temp = arr.map(el => el[key])
     return arr.filter((el, i) =>
