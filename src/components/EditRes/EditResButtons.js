@@ -1,6 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import ResiContext from "../../contexts/reservationContext";
+import SafeResAPIService from "../../services/res-api-service";
 
 export default function EditResButtons(props) {
+
+    const resetContext = useContext(ResiContext)
     return (
         <div className='editRes_buttons'>
             <FontAwesomeIcon
@@ -34,7 +39,11 @@ export default function EditResButtons(props) {
             <FontAwesomeIcon
                 icon='check'
                 className='fa_checkOff'
-                onClick={() => props.checkOff()}
+                onClick={() => {
+                    resetContext.setReset(!resetContext.resetList)
+                    props.checkOff()
+                    SafeResAPIService.updateGuestArrived(props.id)
+                }}
             />
         </div>
     )

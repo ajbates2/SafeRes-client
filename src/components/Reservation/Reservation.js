@@ -18,8 +18,8 @@ export default function Reservation(props) {
                     ${!notifiedState ? '' : 'notified'}`}
                 key={props.id}
             >
-                <span className='res_name'>{props.name}</span>
-                <span className='res_party'>{props.partySize} ppl</span>
+                <span className='res_name'>{props.guest_name}</span>
+                <span className='res_party'>{props.party_size} ppl</span>
                 <span className='res_notes'>{props.notes}</span>
                 <span className='fa_icons'>
                     <FontAwesomeIcon

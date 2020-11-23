@@ -8,7 +8,7 @@ export default function TimeBlock(props) {
             <p className='timeBlock_title'>{props.time}</p>
             <ul className='timeBlock_list' key={props.time}>
                 {props.resi.map(res => {
-                    if (res.time === props.time) {
+                    if (res.res_time === props.time) {
                         return (
                             <Reservation
                                 key={res.id}

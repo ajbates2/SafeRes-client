@@ -30,6 +30,19 @@ const SafeResAPIService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             )
+    },
+    updateGuestArrived(res_id) {
+        return fetch(`${config.API_ENDPOINT}/res/arrived/${res_id}`, {
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            method: 'PATCH'
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
     }
 }
 
