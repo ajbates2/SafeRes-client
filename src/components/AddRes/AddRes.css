@@ -25,3 +25,7 @@
     right: 10px;
     top: 10px;
 }
+
+.walk_in_selected {
+    background-color: darkgray;
+}

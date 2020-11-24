@@ -15,9 +15,25 @@ export default function EditResButtons(props) {
             />
             <button
                 className='editRes_noShow'
-                onClick={() => props.checkOff()}
+                onClick={() => {
+                    resetContext.setReset(!resetContext.resetList)
+                    props.checkOff()
+                    SafeResAPIService.updateGuestNoShow(props.id)
+                        .then(res => console.log(res.status))
+                }}
             >
                 no show
+            </button>
+            <button
+                className='editRes_cancel'
+                onClick={() => {
+                    resetContext.setReset(!resetContext.resetList)
+                    props.checkOff()
+                    SafeResAPIService.updateGuestCancelled(props.id)
+                        .then(res => console.log(res.status))
+                }}
+            >
+                cancel
             </button>
             <button
                 className='editRes_waitState'
@@ -43,6 +59,7 @@ export default function EditResButtons(props) {
                     resetContext.setReset(!resetContext.resetList)
                     props.checkOff()
                     SafeResAPIService.updateGuestArrived(props.id)
+                        .then(res => console.log(res.status))
                 }}
             />
         </div>

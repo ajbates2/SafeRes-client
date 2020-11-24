@@ -12,7 +12,6 @@ export default function ReservationPage(props) {
   useEffect(() => {
     return SafeResAPIService.getAllCurrentResi()
       .then(data => resContext.setResList(data))
-      .catch()
   }, [resContext.resetList])
 
   const dedupeByKey = (arr, key) => {
