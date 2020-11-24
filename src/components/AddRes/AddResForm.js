@@ -46,7 +46,13 @@ export default function AddResForm(props) {
                     defaultValue='18:00'
                 />
                 <input type='number' name='party_size' id='party_size' placeholder='Party Size' />
-                <input type='tel' name='phone_number' id='phone_number' placeholder='Phone Number' />
+                <input
+                    type='tel'
+                    name='phone_number'
+                    id='phone_number'
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder='Phone Number'
+                />
                 <input type='text' name='notes' id='notes' placeholder='notes' />
                 <button
                     type='button'

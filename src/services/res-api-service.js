@@ -49,6 +49,23 @@ const SafeResAPIService = {
                     : res.json()
             )
     },
+    notifySms(phone_number, guest_name, res_id) {
+        return fetch(`${config.API_ENDPOINT}/sms/notify/${phone_number}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            method: 'POST',
+            body: JSON.stringify({ guest_name, res_id })
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => {
+                        return { error: e.message }
+                    })
+                    : res.json()
+            )
+    },
     updateResInfo(res_id, guest_name, phone_number, party_size, res_time, notes) {
         return fetch(`${config.API_ENDPOINT}/res/${res_id}`, {
             method: 'PATCH',
@@ -98,6 +115,19 @@ const SafeResAPIService = {
     },
     updateGuestCancelled(res_id) {
         return fetch(`${config.API_ENDPOINT}/res/cancel/${res_id}`, {
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            method: 'PATCH'
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+    updateGuestWaiting(res_id) {
+        return fetch(`${config.API_ENDPOINT}/res/waiting/${res_id}`, {
             headers: {
                 'Authorization': `bearer ${TokenService.getAuthToken()}`
             },

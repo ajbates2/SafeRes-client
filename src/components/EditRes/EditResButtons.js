@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import phone from "phone";
 import { useContext } from "react";
 import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
@@ -6,6 +7,7 @@ import SafeResAPIService from "../../services/res-api-service";
 export default function EditResButtons(props) {
 
     const resetContext = useContext(ResiContext)
+
     return (
         <div className='editRes_buttons'>
             <FontAwesomeIcon
@@ -16,10 +18,12 @@ export default function EditResButtons(props) {
             <button
                 className='editRes_noShow'
                 onClick={() => {
-                    resetContext.setReset(!resetContext.resetList)
-                    props.checkOff()
                     SafeResAPIService.updateGuestNoShow(props.id)
                         .then(res => console.log(res.status))
+                        .then(() => {
+                            resetContext.setReset(!resetContext.resetList)
+                            props.checkOff()
+                        })
                 }}
             >
                 no show
@@ -27,10 +31,12 @@ export default function EditResButtons(props) {
             <button
                 className='editRes_cancel'
                 onClick={() => {
-                    resetContext.setReset(!resetContext.resetList)
-                    props.checkOff()
                     SafeResAPIService.updateGuestCancelled(props.id)
                         .then(res => console.log(res.status))
+                        .then(() => {
+                            resetContext.setReset(!resetContext.resetList)
+                            props.checkOff()
+                        })
                 }}
             >
                 cancel
@@ -38,8 +44,12 @@ export default function EditResButtons(props) {
             <button
                 className='editRes_waitState'
                 onClick={() => {
-                    props.setWaitState()
-                    props.changeView()
+                    SafeResAPIService.updateGuestWaiting(props.id)
+                        .then(res => console.log(res.status))
+                        .then(() => {
+                            props.setWaitState()
+                            props.changeView()
+                        })
                 }}
             >
                 waiting
@@ -48,18 +58,21 @@ export default function EditResButtons(props) {
                 icon='bell'
                 className='fa_notify'
                 onClick={() => {
-                    props.setNotifiedState()
+                    window.alert(`${phone(props.phone_number)[0]}: Hi ${props.guest_name} you're table is ready at DEMO RESTAURANT`)
                     props.changeView()
+                    props.setNotifiedState()
                 }}
             />
             <FontAwesomeIcon
                 icon='check'
                 className='fa_checkOff'
                 onClick={() => {
-                    resetContext.setReset(!resetContext.resetList)
-                    props.checkOff()
                     SafeResAPIService.updateGuestArrived(props.id)
                         .then(res => console.log(res.status))
+                        .then(() => {
+                            resetContext.setReset(!resetContext.resetList)
+                            props.checkOff()
+                        })
                 }}
             />
         </div>

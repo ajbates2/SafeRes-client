@@ -9,10 +9,12 @@ import './ReservationPage.css'
 export default function ReservationPage(props) {
   const resContext = useContext(ResiContext)
 
-  useEffect(() => {
+  const getResInfo = () => {
     return SafeResAPIService.getAllCurrentResi()
       .then(data => resContext.setResList(data))
-  }, [resContext.resetList])
+  }
+
+  useEffect(getResInfo, [resContext.resetList]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const dedupeByKey = (arr, key) => {
     const temp = arr.map(el => el[key])

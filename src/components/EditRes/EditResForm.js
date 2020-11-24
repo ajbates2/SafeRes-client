@@ -66,6 +66,7 @@ export default function EditResForm(props) {
             <input
                 type='tel'
                 name='phone_number'
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 id='phone_number'
                 defaultValue={props.phone_number}
                 ref={phoneNumRef}
