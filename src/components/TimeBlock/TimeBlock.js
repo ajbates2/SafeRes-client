@@ -1,11 +1,12 @@
 import Reservation from "../Reservation/Reservation"
+import moment from "moment";
 import './TimeBlock.css'
 
 export default function TimeBlock(props) {
-
+    const normalTime = moment(props.time, 'HH:mm:SS').format('hh:mm a')
     return (
         <div className='timeBlock_container'>
-            <p className='timeBlock_title'>{props.time}</p>
+            <p className='timeBlock_title'>{normalTime}</p>
             <ul className='timeBlock_list' key={props.time}>
                 {props.resi.map(res => {
                     if (res.res_time === props.time) {

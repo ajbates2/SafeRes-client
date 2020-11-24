@@ -19,6 +19,13 @@
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
+.res_form button {
+    padding: 10px;
+    width: -webkit-fill-available;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
 .editRes_buttons {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -56,7 +63,6 @@
     margin: 0;
     justify-self: center;
     padding: 15px;
-    
 }
 
 .editRes_waitState {

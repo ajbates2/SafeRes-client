@@ -14,6 +14,18 @@ const SafeResAPIService = {
                     : res.json()
             )
     },
+    getDailyCount(res_day) {
+        return fetch(`${config.API_ENDPOINT}/counts/day/${res_day}`, {
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
     postNewResi(guest_name, phone_number, party_size, res_time, walk_in, notes, res_date) {
         return fetch(`${config.API_ENDPOINT}/res`, {
             method: 'POST',

@@ -1,5 +1,12 @@
 .reservations {
+    grid-row: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 130px;
+}
+
+.res_page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }

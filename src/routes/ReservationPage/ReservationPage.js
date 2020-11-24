@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import AddResButton from "../../components/AddRes/AddResButton";
+import DailyStats from "../../components/DailyStats/DailyStats";
 import Header from "../../components/Header/Header";
 import TimeBlock from "../../components/TimeBlock/TimeBlock";
 import ResiContext from "../../contexts/reservationContext";
@@ -37,7 +37,7 @@ export default function ReservationPage(props) {
           )
         })}
       </main>
-      <AddResButton />
+      <DailyStats />
     </div>
   );
 }

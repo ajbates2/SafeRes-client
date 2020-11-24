@@ -2,9 +2,9 @@
     color: rgb(68, 68, 68);
     margin: 20px;
     padding: 0;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    grid-column: 6;
+    justify-self: center;
+    align-self: center;
 }
 
 .addRes_container {
@@ -27,5 +27,24 @@
 }
 
 .walk_in_selected {
-    background-color: darkgray;
+    background-color: yellow;
+    outline: 0;
+}
+
+.res_form button {
+    outline: 0;
+    border-radius: 4px;
+    margin: 7px;
+}
+
+.res_form button:hover {
+    cursor: pointer;
+}
+
+.walk_in_button {
+    margin: 7px;
+}
+
+.add_res_submit {
+    font-size: larger;
 }

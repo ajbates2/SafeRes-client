@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 10px;
+    grid-row: 1;
 }
 
 .main_header h1 h2 {

@@ -58,7 +58,7 @@ export default function AddResForm(props) {
                 >
                     Walk In
                 </button>
-                <button type='submit'>Add Res</button>
+                <button className='add_res_submit' type='submit'>Add Res</button>
             </form>
         </div>
     )
