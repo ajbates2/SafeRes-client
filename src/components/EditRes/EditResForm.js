@@ -46,6 +46,7 @@ export default function EditResForm(props) {
                 id='guest_name'
                 defaultValue={props.guest_name}
                 ref={guestNameRef}
+                required
             />
             <input type='time'
                 name='guest_name'
@@ -55,6 +56,7 @@ export default function EditResForm(props) {
                 step='1800'
                 ref={timeRef}
                 defaultValue={props.res_time}
+                required
             />
             <input
                 type='number'
@@ -62,6 +64,7 @@ export default function EditResForm(props) {
                 id='party_size'
                 defaultValue={props.party_size}
                 ref={partyRef}
+                required
             />
             <input
                 type='tel'
@@ -70,6 +73,7 @@ export default function EditResForm(props) {
                 id='phone_number'
                 defaultValue={props.phone_number}
                 ref={phoneNumRef}
+                required
             />
             <input
                 type='text'

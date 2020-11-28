@@ -44,14 +44,16 @@ export default function AddResForm(props) {
                     max='21:00'
                     step='1800'
                     defaultValue='18:00'
+                    required
                 />
-                <input type='number' name='party_size' id='party_size' placeholder='Party Size' />
+                <input type='number' name='party_size' id='party_size' placeholder='Party Size' required />
                 <input
                     type='tel'
                     name='phone_number'
                     id='phone_number'
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder='Phone Number'
+                    placeholder='123-456-7890'
+                    required
                 />
                 <input type='text' name='notes' id='notes' placeholder='notes' />
                 <button
@@ -61,6 +63,7 @@ export default function AddResForm(props) {
                     value={walkInState}
                     onClick={() => setWalkInState(!walkInState)}
                     className={`walk_in_button ${walkInState ? 'walk_in_selected' : ''}`}
+                    required
                 >
                     Walk In
                 </button>
