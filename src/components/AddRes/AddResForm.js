@@ -3,12 +3,17 @@ import moment from "moment";
 import './AddRes.css'
 import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
-import { useContext, useState } from "react";
+import NumberFormat from 'react-number-format';
+import { useContext, useRef, useState } from "react";
 
 export default function AddResForm(props) {
 
     const [walkInState, setWalkInState] = useState(false)
     const resContext = useContext(ResiContext)
+    const walkInRef = useRef(false)
+    const onButtonClick = () => {
+        walkInRef.current.focus()
+    }
 
     const handleSubmit = ev => {
         ev.preventDefault()
@@ -27,6 +32,15 @@ export default function AddResForm(props) {
                 resContext.setReset(!resContext.resetList)
             })
     }
+
+    const oldPhoneInput = (<input
+        type='tel'
+        name='phone_number'
+        id='phone_number'
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        placeholder='123-456-7890'
+        required
+    />)
 
     return (
         <div className='addRes_container'>
@@ -47,12 +61,13 @@ export default function AddResForm(props) {
                     required
                 />
                 <input type='number' name='party_size' id='party_size' placeholder='Party Size' required />
-                <input
-                    type='tel'
+                <NumberFormat
+                    displayType={'tel'}
                     name='phone_number'
                     id='phone_number'
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     placeholder='123-456-7890'
+                    format="###-###-####"
+                    mask="_"
                     required
                 />
                 <input type='text' name='notes' id='notes' placeholder='notes' />
@@ -61,13 +76,14 @@ export default function AddResForm(props) {
                     id='walk_in'
                     name='walk_in'
                     value={walkInState}
+                    ref={walkInRef}
                     onClick={() => setWalkInState(!walkInState)}
                     className={`walk_in_button ${walkInState ? 'walk_in_selected' : ''}`}
                     required
                 >
                     Walk In
                 </button>
-                <button className='add_res_submit' type='submit'>Add Res</button>
+                <button className='add_res_submit' onClick={onButtonClick} type='submit'>Add Res</button>
             </form>
         </div>
     )
