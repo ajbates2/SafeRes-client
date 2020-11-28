@@ -33,15 +33,6 @@ export default function AddResForm(props) {
             })
     }
 
-    const oldPhoneInput = (<input
-        type='tel'
-        name='phone_number'
-        id='phone_number'
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-        placeholder='123-456-7890'
-        required
-    />)
-
     return (
         <div className='addRes_container'>
             <FontAwesomeIcon
