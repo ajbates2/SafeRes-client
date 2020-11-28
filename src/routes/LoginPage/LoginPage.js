@@ -48,7 +48,11 @@ export default function LoginPage(props) {
                     </div>
                 </form>
                 <div className='demo_creds'>
-                    Demo account Creds
+                    <h3>Demo account Creds</h3>
+                    <p>
+                        email: foo@bar.com<br />
+                        password: password
+                    </p>
                 </div>
             </main>
             <footer>
