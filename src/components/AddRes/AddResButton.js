@@ -12,7 +12,7 @@ export default function AddResButton() {
             <FontAwesomeIcon
                 icon='plus-square'
                 size='5x'
-                className='fa_addResButton'
+                className='fa_addResButton cursor_hover'
                 onClick={() => setOpenForm(!openForm)}
             />
         )

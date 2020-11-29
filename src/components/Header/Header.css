@@ -1,13 +1,46 @@
 .main_header {
     background-color: darkgray;
     padding: .5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: 33%;
     margin-bottom: 10px;
     grid-row: 1;
 }
 
-.main_header h1 h2 {
+.main_header h1 {
     margin: 0;
+}
+
+.app_title {
+    grid-column: 1;
+}
+
+.rest_name {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.header_menu_button {
+    grid-column: 3;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.header_menu {
+    position: fixed;
+    right: 0;
+    top: 69px;
+    background-color: darkgray;
+    padding: 1rem;
+    width: 200px;
+    margin: 0 10px;
+    text-align: end;
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 400px) {
+    .rest_name{
+        display: none;
+    }
 }

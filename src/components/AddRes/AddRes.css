@@ -37,14 +37,16 @@
     margin: 7px;
 }
 
-.res_form button:hover {
-    cursor: pointer;
-}
-
 .walk_in_button {
     margin: 7px;
 }
 
 .add_res_submit {
     font-size: larger;
+}
+
+@media only screen and (max-width: 500px) {
+    .fa_addResButton {
+        grid-column: 3;
+    }
 }

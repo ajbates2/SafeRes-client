@@ -38,3 +38,21 @@
     font-size: x-large;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 500px) {
+    .walk_in_count {
+        grid-column: 2;
+    }
+    
+    .unique_count {
+        display: none;
+    }
+    
+    .no_show_count {
+        display: none;
+    }
+    
+    .cancelled_count {
+        display: none;
+    }
+}

@@ -39,10 +39,10 @@ export default function LoginPage(props) {
                 >
                     <h2>Login</h2>
                     <label htmlFor='email'>Email</label>
-                    <input id='email' name='email' type='text' />
+                    <input id='email' name='email' type='text' required />
                     <label htmlFor='password'>password</label>
-                    <input id='password' name='password' type='password' />
-                    <button type='submit'>Login</button>
+                    <input id='password' name='password' type='password' required />
+                    <button type='submit' className='cursor_hover'>Login</button>
                     <div role='alert'>
                         {error.error && <p className='red'>{error.error}</p>}
                     </div>
@@ -53,12 +53,26 @@ export default function LoginPage(props) {
                         email: foo@bar.com<br />
                         password: password
                     </p>
+                    <p className='demo_info'>
+                        ***Text messaging won't be active for the demo account being that you need a paid account to send
+                        messages to all numbers***
+                    </p>
                 </div>
             </main>
             <footer>
-                <div>
-                    contact
-                </div>
+                <h3>About</h3>
+                <p>
+                    SafeRes is an app designed to help restaurants manage there daily reservations, as well
+                    as help with contact tracing during the COVID-19 pandemic.
+                </p>
+                <p>
+                    Being able to contact your guests in the event you find out somebody was in your restaurant
+                    that tested positive for COVID-19 will help slow the spread of this disease.
+                </p>
+                <p>
+                    Since you have to set up text messaging for every account, and the fact that this app uses
+                    sensitive data, account creation is not active at this time.
+                </p>
             </footer>
         </div>
     )

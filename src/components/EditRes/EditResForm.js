@@ -85,7 +85,12 @@ export default function EditResForm(props) {
                 defaultValue={props.notes}
                 ref={notesRef}
             />
-            <input type='submit' onClick={onButtonClick} value='update' />
+            <input
+                type='submit'
+                className='cursor_hover'
+                onClick={onButtonClick}
+                value='update'
+            />
         </form>
     )
 }

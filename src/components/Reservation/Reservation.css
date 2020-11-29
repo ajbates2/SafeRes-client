@@ -34,3 +34,7 @@
 .notified {
     background-color: lightgreen;
 }
+
+.fa_elli:hover {
+    cursor: pointer;
+}

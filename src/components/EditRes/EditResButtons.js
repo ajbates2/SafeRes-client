@@ -12,11 +12,11 @@ export default function EditResButtons(props) {
         <div className='editRes_buttons'>
             <FontAwesomeIcon
                 icon='times'
-                className='fa_closeWindow'
+                className='fa_closeWindow cursor_hover'
                 onClick={() => props.changeView()}
             />
             <button
-                className='editRes_noShow'
+                className='editRes_noShow cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestNoShow(props.id)
                         .then(res => console.log(res.status))
@@ -29,7 +29,7 @@ export default function EditResButtons(props) {
                 no show
             </button>
             <button
-                className='editRes_cancel'
+                className='editRes_cancel cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestCancelled(props.id)
                         .then(res => console.log(res.status))
@@ -42,7 +42,7 @@ export default function EditResButtons(props) {
                 cancel
             </button>
             <button
-                className='editRes_waitState'
+                className='editRes_waitState cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestWaiting(props.id)
                         .then(res => console.log(res.status))
@@ -56,7 +56,7 @@ export default function EditResButtons(props) {
             </button>
             <FontAwesomeIcon
                 icon='bell'
-                className='fa_notify'
+                className='fa_notify cursor_hover'
                 onClick={() => {
                     window.alert(`${phone(props.phone_number)[0]}: Hi ${props.guest_name} you're table is ready at DEMO RESTAURANT`)
                     props.changeView()
@@ -65,7 +65,7 @@ export default function EditResButtons(props) {
             />
             <FontAwesomeIcon
                 icon='check'
-                className='fa_checkOff'
+                className='fa_checkOff cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestArrived(props.id)
                         .then(res => console.log(res.status))
