@@ -1,6 +1,7 @@
 import { useContext, useRef } from 'react'
 import ResiContext from '../../contexts/reservationContext'
 import SafeResAPIService from '../../services/res-api-service'
+import NumberFormat from 'react-number-format';
 import './EditRes.css'
 
 export default function EditResForm(props) {
@@ -51,9 +52,6 @@ export default function EditResForm(props) {
             <input type='time'
                 name='guest_name'
                 id='guest_name'
-                min='11:00'
-                max='21:00'
-                step='1800'
                 ref={timeRef}
                 defaultValue={props.res_time}
                 required
@@ -66,12 +64,14 @@ export default function EditResForm(props) {
                 ref={partyRef}
                 required
             />
-            <input
-                type={'tel'}
+            <NumberFormat
+                displayType={'tel'}
                 name='phone_number'
                 id='phone_number'
                 defaultValue={props.phone_number}
-                ref={phoneNumRef}
+                getInputRef={phoneNumRef}
+                format="###-###-####"
+                mask="_"
                 required
             />
             <input

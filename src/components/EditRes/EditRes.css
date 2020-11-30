@@ -33,12 +33,13 @@
     grid-template: auto;
 }
 
-.fa_notify {
-    grid-row: 3;
-    grid-column: 1;
+.editRes_notify {
+    grid-row: 4;
+    grid-column: 1 / span 2;
     justify-self: center;
     align-self: center;
     font-size: 1.5em;
+    width: 80%;
 }
 
 .fa_closeWindow {
@@ -48,38 +49,58 @@
     align-self: start;
 }
 
-.fa_checkOff {
-    grid-row: 3;
-    grid-column: 2;
+.editRes_checkOff {
+    grid-row: 5;
+    grid-column: 1 / span 2;
     justify-self: center;
     align-self: center;
     font-size: 1.5em;
+    width: 80%;
 }
 
 .editRes_view button {
     border: 0;
     border-radius: 4px;
     font-size: large;
-    margin: 0;
+    margin: 0 5px;
     justify-self: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .editRes_waitState {
     grid-row: 1;
     grid-column: 1/ span 2;
-    width: 95%;
+    width: 80%;
     align-self: end;
+    justify-self: center;
+    align-self: center;
 }
 
 .editRes_noShow {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 1 / span 2;
     align-self: center;
+    width: 80%;
 }
 
 .editRes_cancel {
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 3;
+    grid-column: 1 / span 2;
     align-self: center;
+    width: 80%;
+}
+
+@media only screen and (max-width: 500px) {
+    .editRes_view {
+        height: 625px;
+    }
+    .editRes_form {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        height: auto;
+    }
+    .editRes_buttons {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
 }

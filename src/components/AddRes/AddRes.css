@@ -49,4 +49,9 @@
     .fa_addResButton {
         grid-column: 3;
     }
+
+    .addRes_container {
+        width: auto
+    }
 }
+

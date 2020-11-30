@@ -51,9 +51,6 @@ export default function AddResForm(props) {
                 <input type='time'
                     name='res_time'
                     id='res_time'
-                    min='11:00'
-                    max='21:00'
-                    step='1800'
                     defaultValue='18:00'
                     required
                 />

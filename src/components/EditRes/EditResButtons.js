@@ -54,18 +54,18 @@ export default function EditResButtons(props) {
             >
                 waiting
             </button>
-            <FontAwesomeIcon
-                icon='bell'
-                className='fa_notify cursor_hover'
+            <button
+                className='editRes_notify cursor_hover'
                 onClick={() => {
-                    window.alert(`${phone(props.phone_number)[0]}: Hi ${props.guest_name} you're table is ready at DEMO RESTAURANT`)
+                    SafeResAPIService.notifySms(phone(props.phone_number)[0], props.guest_name, props.id)
                     props.changeView()
                     props.setNotifiedState()
                 }}
-            />
-            <FontAwesomeIcon
-                icon='check'
-                className='fa_checkOff cursor_hover'
+            >
+                notify
+            </button>
+            <button
+                className='editRes_checkOff cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestArrived(props.id)
                         .then(res => console.log(res.status))
@@ -74,7 +74,9 @@ export default function EditResButtons(props) {
                             props.checkOff()
                         })
                 }}
-            />
+            >
+                check off
+            </button>
         </div>
     )
 }
