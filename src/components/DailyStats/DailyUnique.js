@@ -1,6 +1,6 @@
 export default function DailyUnique(props) {
     return (
-        <div className='unique_count'>
+        <div className='unique_count sideBar_count_grid'>
             <p className='count_value'>
                 {props.unique}
             </p>

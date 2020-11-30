@@ -1,0 +1,9 @@
+.listHeader_container {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    font-weight: 500;
+    font-style: italic;
+    z-index: 1;
+}

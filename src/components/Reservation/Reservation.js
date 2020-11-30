@@ -16,7 +16,7 @@ export default function Reservation(props) {
                 <li
                     className=
                     {
-                        `res_block
+                        `res_block dark_blue_gray
                     ${waitState || props.waiting ? 'waiting' : ''} 
                     ${notifiedState || props.notified ? 'notified' : ''}`
                     }
@@ -43,6 +43,8 @@ export default function Reservation(props) {
                 checkOff={() => setCheckOff(!checkOff)}
                 setWaitState={() => setWaitState(!waitState)}
                 setNotifiedState={() => setNotifiedState(!notifiedState)}
+                waitState={waitState}
+                notifiedState={notifiedState}
                 {...props}
             />
         )

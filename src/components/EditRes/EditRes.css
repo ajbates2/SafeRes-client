@@ -1,10 +1,10 @@
 .editRes_view {
-    background-color: lightgray;
     margin: 5px;
     padding: 10px;
     list-style: none;
     display: grid;
     grid-template: 50% / 50%;
+    box-shadow: 8px 12px 25px 0px #101218;
 }
 
 .editRes_form {
@@ -16,14 +16,15 @@
     width: -webkit-fill-available;
     margin: 7px;
     border: 0;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    box-shadow: 0px 0px 15px rgb(16 18 24 / .4);
+    background-color: #ced2de;
 }
 
 .res_form button {
     padding: 10px;
     width: -webkit-fill-available;
     border: 0;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    box-shadow: 0px 0px 15px rgb(16 18 24 / .4);
 }
 
 .editRes_buttons {
@@ -60,11 +61,20 @@
 
 .editRes_view button {
     border: 0;
-    border-radius: 4px;
     font-size: large;
     margin: 0 5px;
     justify-self: center;
     padding: 10px;
+    background-color: #ced2de;
+    box-shadow: 0px 0px 15px rgb(16 18 24 / .4);
+}
+
+.editRes_button:hover {
+    background-color: #E07A5F;
+}
+
+.editRes_button:focus {
+    background-color: #E07A5F;
 }
 
 .editRes_waitState {

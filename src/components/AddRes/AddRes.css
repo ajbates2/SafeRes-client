@@ -1,10 +1,29 @@
 .fa_addResButton {
-    color: rgb(68, 68, 68);
+    margin: 17px;
+}
+
+.addRes_button {
     margin: 20px;
     padding: 0;
     grid-column: 6;
     justify-self: center;
     align-self: center;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #E07A5F;
+    color: #F4F1DE;
+}
+
+.addRes_button:hover {
+    color: #3D405B;
+    background-color: #F4F1DE;
+}
+
+.addRes_button:focus {
+    color: #3D405B;
+    background-color: #F4F1DE;
 }
 
 .addRes_container {
@@ -12,12 +31,11 @@
     z-index: 1;
     right: 5%;
     left: 5%;
-    width: 500px;
+    max-width: 500px;
     top: 122px;
     margin: 0 auto;
-    background-color: darkgray;
     padding: 30px;
-    box-shadow: 0 0 17px 4px rgba(0,0,0,.6);
+    box-shadow: 0px 0px 50px #101218;
 }
 
 .fa_closeAddRes {
@@ -27,13 +45,13 @@
 }
 
 .walk_in_selected {
-    background-color: yellow;
+    background-color: #FD2B3B;
+    color: #101218;
     outline: 0;
 }
 
 .res_form button {
     outline: 0;
-    border-radius: 4px;
     margin: 7px;
 }
 
@@ -41,17 +59,34 @@
     margin: 7px;
 }
 
+.walk_in_button:hover {
+    background-color: #FD2B3B;
+    color: #101218;
+    outline: 0;
+}
+
 .add_res_submit {
     font-size: larger;
+    background-color: #70A7FF;
+}
+
+.add_res_submit:hover {
+    background-color: #FB5607;
+}
+
+.add_res_submit:focus {
+    background-color: #FB5607;
 }
 
 @media only screen and (max-width: 500px) {
-    .fa_addResButton {
+    .addRes_button {
         grid-column: 3;
-    }
-
-    .addRes_container {
-        width: auto
     }
 }
 
+@media only screen and (min-width: 1000px)  {
+    .addRes_button {
+        grid-column: 1;
+        grid-row: 10;
+    }
+}

@@ -1,7 +1,7 @@
 .dailyStats_container {
     bottom: 0;
     position: fixed;
-    background-color: lightblue;
+    background-color: #181A25;
     width: 100%;
     height: 120px;
     display: grid;
@@ -54,5 +54,60 @@
     
     .cancelled_count {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .dailyStats_container {
+        grid-column: 2;
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        grid-row: 2 / span 3;
+        width: 280px;
+        justify-self: flex-end;
+        padding-top: 100px;
+        grid-template-rows: repeat(auto-fit, minmax(auto, 125px));
+    }
+    .head_count {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .walk_in_count {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .unique_count {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .no_show_count {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    .cancelled_count {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .sideBar_count_grid {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .count_title {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+        align-self: center;
+    }
+    .count_value {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
     }
 }

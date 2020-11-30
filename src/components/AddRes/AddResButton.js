@@ -9,12 +9,14 @@ export default function AddResButton() {
 
     if (!openForm) {
         return (
-            <FontAwesomeIcon
-                icon='plus-square'
-                size='5x'
-                className='fa_addResButton cursor_hover'
-                onClick={() => setOpenForm(!openForm)}
-            />
+            <div className='addRes_button cursor_hover'>
+                <FontAwesomeIcon
+                    icon='plus'
+                    size='3x'
+                    className='fa_addResButton'
+                    onClick={() => setOpenForm(!openForm)}
+                />
+            </div>
         )
     }
     else {

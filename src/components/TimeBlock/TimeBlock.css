@@ -1,8 +1,9 @@
 .timeBlock_container {
-    background-color: gray;
     padding: 20px;
     flex: 0 1 500px;
     margin: 10px;
+    box-shadow: 0px 0px 50px #101218;
+    max-width: 500px;
 }
 
 .timeBlock_list {
@@ -13,4 +14,10 @@
 .timeBlock_title {
     margin: 10px;
     padding: 10px;
+}
+
+@media only screen and (min-width: 1500px) {
+    .timeBlock_container {
+        max-width: 1000px;
+    }
 }

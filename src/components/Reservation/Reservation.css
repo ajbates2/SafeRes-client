@@ -1,10 +1,10 @@
 .res_block {
-    background-color: lightgray;
     margin: 5px;
     padding: 15px;
     list-style: none;
     display: grid;
     grid-template-columns: 100px;
+    box-shadow: 8px 12px 25px 0px #101218;
 }
 
 .res_name {
@@ -28,11 +28,11 @@
 }
 
 .waiting {
-    background-color: lightblue;
+    background-color: #FF006E;
 }
 
 .notified {
-    background-color: lightgreen;
+    background-color: #3A86FF;
 }
 
 .fa_elli:hover {

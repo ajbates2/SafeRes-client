@@ -4,11 +4,15 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    color: #ced2de;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:
+      linear-gradient(#414562, #292B3D) no-repeat,
+      linear-gradient(#292B3D, #414562 );
 }
 
 code {
@@ -18,4 +22,32 @@ code {
 
 .cursor_hover:hover {
   cursor: pointer;
+}
+
+.independence {
+  background-color: #414762;
+}
+
+.dark_blue_gray {
+  background-color: #626E93;
+}
+
+.rich_black_font {
+  color: #101218;
+}
+
+.raisin_black {
+  background-color: #181A25;
+}
+
+.light_periwinkle_font {
+  color: #ced2de;
+}
+
+.terracotta {
+  background-color: #E07A5F;
+}
+
+.eggshell {
+  background-color: #F4F1DE;
 }

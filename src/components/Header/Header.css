@@ -1,10 +1,9 @@
 .main_header {
-    background-color: darkgray;
+    background-color: #E07A5F;
     padding: .5rem 2rem;
     display: grid;
     grid-template-columns: 33%;
-    margin-bottom: 10px;
-    grid-row: 1;
+    z-index: 5;
 }
 
 .main_header h1 {
@@ -13,11 +12,9 @@
 
 .app_title {
     grid-column: 1;
-}
-
-.rest_name {
-    grid-column: 2;
-    justify-self: center;
+    font-family: 'Pacifico', cursive;
+    filter: drop-shadow(0px 3px 1px #101218);
+    color: #F4F1DE;
 }
 
 .header_menu_button {
@@ -29,18 +26,31 @@
 .header_menu {
     position: fixed;
     right: 0;
-    top: 69px;
-    background-color: darkgray;
+    top: 81px;
     padding: 1rem;
-    width: 200px;
+    width: 115px;
     margin: 0 10px;
     text-align: end;
+    z-index: 10;
     text-decoration: none;
-    color: black;
+    box-shadow: 3px 4px 13px 0px #101319;
+    color: #ced2de;
+}
+
+.header_menu:hover {
+    background-color: #E07A5F;
+    color: #3D405B;
 }
 
 @media only screen and (max-width: 400px) {
     .rest_name{
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .main_header {
+        position: fixed;
+        width: 100%;
     }
 }

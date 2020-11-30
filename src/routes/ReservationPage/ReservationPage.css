@@ -4,9 +4,24 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 130px;
+    margin-top: 10px;
 }
 
-.res_page {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+@media only screen and (min-width: 1000px) {
+    .reservations {
+        display: block;
+        place-self: center;
+        margin-top: 85px;
+    }
+
+    .res_page {
+        display: grid;
+        grid-template-columns: 67% 33%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .reservations {
+        width: 800px;
+    }
 }

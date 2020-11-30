@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import DailyStats from "../../components/DailyStats/DailyStats";
 import Header from "../../components/Header/Header";
+import ListHeader from "../../components/ListHeader/ListHeader";
 import TimeBlock from "../../components/TimeBlock/TimeBlock";
 import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
@@ -29,6 +30,7 @@ export default function ReservationPage(props) {
     <div className="res_page">
       <Header />
       <main className="reservations">
+        <ListHeader />
         {shortenedList.map(block => {
           return (
             <TimeBlock

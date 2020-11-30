@@ -16,7 +16,7 @@ export default function EditResButtons(props) {
                 onClick={() => props.changeView()}
             />
             <button
-                className='editRes_noShow cursor_hover'
+                className='editRes_noShow editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestNoShow(props.id)
                         .then(res => console.log(res.status))
@@ -29,7 +29,7 @@ export default function EditResButtons(props) {
                 no show
             </button>
             <button
-                className='editRes_cancel cursor_hover'
+                className='editRes_cancel editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestCancelled(props.id)
                         .then(res => console.log(res.status))
@@ -42,7 +42,7 @@ export default function EditResButtons(props) {
                 cancel
             </button>
             <button
-                className='editRes_waitState cursor_hover'
+                className='editRes_waitState editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestWaiting(props.id)
                         .then(res => console.log(res.status))
@@ -55,7 +55,7 @@ export default function EditResButtons(props) {
                 waiting
             </button>
             <button
-                className='editRes_notify cursor_hover'
+                className='editRes_notify editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.notifySms(phone(props.phone_number)[0], props.guest_name, props.id)
                     props.changeView()
@@ -65,7 +65,7 @@ export default function EditResButtons(props) {
                 notify
             </button>
             <button
-                className='editRes_checkOff cursor_hover'
+                className='editRes_checkOff editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestArrived(props.id)
                         .then(res => console.log(res.status))

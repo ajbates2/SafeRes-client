@@ -34,7 +34,7 @@ export default function AddResForm(props) {
     }
 
     return (
-        <div className='addRes_container'>
+        <div className='addRes_container terracotta'>
             <FontAwesomeIcon
                 icon='times'
                 className='fa_closeAddRes cursor_hover'
@@ -83,12 +83,20 @@ export default function AddResForm(props) {
                     value={walkInState}
                     ref={walkInRef}
                     onClick={() => setWalkInState(!walkInState)}
-                    className={`walk_in_button cursor_hover ${walkInState ? 'walk_in_selected' : ''}`}
+                    className={
+                        `walk_in_button cursor_hover independence light_periwinkle_font
+                        ${walkInState ? 'walk_in_selected' : ''}`}
                     required
                 >
                     Walk In
                 </button>
-                <button className='add_res_submit cursor_hover' onClick={onButtonClick} type='submit'>Add Res</button>
+                <button
+                    className='add_res_submit cursor_hover'
+                    onClick={onButtonClick}
+                    type='submit'
+                >
+                    Add Res
+                </button>
             </form>
         </div>
     )

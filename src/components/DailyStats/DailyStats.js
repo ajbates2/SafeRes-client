@@ -21,7 +21,7 @@ export default function DailyStats(props) {
     }, [resetCon.resetList])
 
     return (
-        <div className='dailyStats_container'>
+        <div className='dailyStats_container light_periwinkle_font'>
             <DailyHeadCount headCount={dailyStats.head_count} />
             <DailyWalkIns walkIns={dailyStats.walk_ins} />
             <DailyUnique unique={dailyStats.unique_parties} />
