@@ -27,9 +27,13 @@ export default function ReservationPage(props) {
   const shortenedList = dedupeByKey(resContext.resList, 'res_time')
 
   return (
-    <div className="res_page">
+    <div className={`
+      res_page
+      ${(resContext.resList.length <= 2) ? 'short_list' : ''}
+      ${(resContext.resList.length < 5) ? 'page_height' : ''}
+    `}>
       <Header />
-      <main className="reservations">
+      <main className='reservations'>
         <ListHeader />
         {shortenedList.map(block => {
           return (
