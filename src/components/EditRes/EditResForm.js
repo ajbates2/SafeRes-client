@@ -1,7 +1,6 @@
 import { useContext, useRef } from 'react'
 import ResiContext from '../../contexts/reservationContext'
 import SafeResAPIService from '../../services/res-api-service'
-import NumberFormat from 'react-number-format';
 import './EditRes.css'
 
 export default function EditResForm(props) {
@@ -67,14 +66,12 @@ export default function EditResForm(props) {
                 ref={partyRef}
                 required
             />
-            <NumberFormat
-                displayType={'tel'}
+            <input
+                type={'tel'}
                 name='phone_number'
                 id='phone_number'
                 defaultValue={props.phone_number}
-                getInputRef={phoneNumRef}
-                format="###-###-####"
-                mask="_"
+                ref={phoneNumRef}
                 required
             />
             <input

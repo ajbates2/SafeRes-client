@@ -41,7 +41,13 @@ export default function AddResForm(props) {
                 onClick={() => props.setOpenForm()}
             />
             <form className='res_form' onSubmit={handleSubmit}>
-                <input type='text' name='guest_name' id='guest_name' placeholder='Name' />
+                <input
+                    type='text'
+                    name='guest_name'
+                    id='guest_name'
+                    placeholder='Name'
+                    required
+                />
                 <input type='time'
                     name='res_time'
                     id='res_time'
@@ -51,7 +57,13 @@ export default function AddResForm(props) {
                     defaultValue='18:00'
                     required
                 />
-                <input type='number' name='party_size' id='party_size' placeholder='Party Size' required />
+                <input
+                    type='number'
+                    name='party_size'
+                    id='party_size'
+                    placeholder='Party Size'
+                    required
+                />
                 <NumberFormat
                     displayType={'tel'}
                     name='phone_number'
@@ -61,7 +73,12 @@ export default function AddResForm(props) {
                     mask="_"
                     required
                 />
-                <input type='text' name='notes' id='notes' placeholder='notes' />
+                <input
+                    type='text'
+                    name='notes'
+                    id='notes'
+                    placeholder='notes'
+                />
                 <button
                     type='button'
                     id='walk_in'
