@@ -7,9 +7,9 @@ export default function AddResButton() {
 
     const [openForm, setOpenForm] = useState(false)
 
-    if (!openForm) {
-        return (
-            <div className='addRes_button cursor_hover'>
+    return (
+        <div className='addRes_button'>
+            <div className='cursor_hover'>
                 <FontAwesomeIcon
                     icon='plus'
                     size='3x'
@@ -17,11 +17,10 @@ export default function AddResButton() {
                     onClick={() => setOpenForm(!openForm)}
                 />
             </div>
-        )
-    }
-    else {
-        return (
-            <AddResForm setOpenForm={() => setOpenForm(!openForm)} />
-        )
-    }
+            <AddResForm
+                setOpenForm={() => setOpenForm(!openForm)}
+                openForm={openForm}
+            />
+        </div>
+    )
 }

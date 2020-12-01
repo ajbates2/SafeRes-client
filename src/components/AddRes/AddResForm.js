@@ -5,6 +5,7 @@ import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
 import NumberFormat from 'react-number-format';
 import { useContext, useRef, useState } from "react";
+import { animated, useSpring } from "react-spring";
 
 export default function AddResForm(props) {
 
@@ -14,6 +15,10 @@ export default function AddResForm(props) {
     const onButtonClick = () => {
         walkInRef.current.focus()
     }
+
+    const animateProps = useSpring({
+        marginTop: props.openForm ? 0 : -1000
+    })
 
     const handleSubmit = ev => {
         ev.preventDefault()
@@ -34,7 +39,7 @@ export default function AddResForm(props) {
     }
 
     return (
-        <div className='addRes_container terracotta'>
+        <animated.div style={animateProps} className='addRes_container terracotta'>
             <FontAwesomeIcon
                 icon='times'
                 className='fa_closeAddRes cursor_hover'
@@ -98,6 +103,6 @@ export default function AddResForm(props) {
                     Add Res
                 </button>
             </form>
-        </div>
+        </animated.div>
     )
 }

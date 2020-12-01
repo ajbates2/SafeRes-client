@@ -38,3 +38,9 @@
         height: 100vh;
     }
 }
+
+@media only screen and (min-height: 1250px) {
+    .big_screen {
+        height: 100vh;
+    }
+}

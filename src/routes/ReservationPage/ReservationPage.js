@@ -31,6 +31,7 @@ export default function ReservationPage(props) {
       res_page
       ${(resContext.resList.length <= 2) ? 'short_list' : ''}
       ${(resContext.resList.length < 5) ? 'page_height' : ''}
+      ${(resContext.resList.length <= 7) ? 'big_screen' : ''}
     `}>
       <Header />
       <main className='reservations'>

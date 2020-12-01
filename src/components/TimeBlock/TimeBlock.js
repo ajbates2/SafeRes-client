@@ -1,6 +1,6 @@
-import Reservation from "../Reservation/Reservation"
 import moment from "moment";
 import './TimeBlock.css'
+import ResBlock from "../ResBlock/ResBlock";
 
 export default function TimeBlock(props) {
     const normalTime = moment(props.time, 'HH:mm:SS').format('hh:mm a')
@@ -11,7 +11,7 @@ export default function TimeBlock(props) {
                 {props.resi.map(res => {
                     if (res.res_time === props.time) {
                         return (
-                            <Reservation
+                            <ResBlock
                                 key={res.id}
                                 {...res}
                             />
