@@ -4,6 +4,7 @@ import ResBlock from "../ResBlock/ResBlock";
 
 export default function TimeBlock(props) {
     const normalTime = moment(props.time, 'HH:mm:SS').format('hh:mm a')
+
     return (
         <div className='timeBlock_container independence'>
             <p className='timeBlock_title light_periwinkle_font'>{normalTime}</p>

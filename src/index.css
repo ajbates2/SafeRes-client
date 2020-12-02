@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&family=Pacifico&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +15,7 @@ body {
   background:
       linear-gradient(#414562, #292B3D) no-repeat,
       linear-gradient(#292B3D, #414562 ) no-repeat;
+  overflow-x: hidden;
 }
 
 code {

@@ -1,28 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './SmallResInfo.css'
+import { animated, useTransition } from "react-spring";
 
-export default function SmallResInfo(props) {
+export default function SmallResInfo(resProps) {
 
-    return (
-        <li
+    const transitions = useTransition(resProps.editView, null, {
+        from: { position: 'relative', opacity: 0 },
+        enter: item => async (next, cancel) => {
+            await new Promise(resolve => setTimeout(resolve, 400));
+            await next({ position: 'relative', opacity: 1 })
+        },
+        leave: { position: 'relative', opacity: 0 },
+    })
+
+    return transitions.map(({ item, props, key }) =>
+        !item && <animated.li
             className=
             {
                 `small_res_info
-                    ${props.waitState || props.waiting ? 'waiting' : ''} 
-                    ${props.notifiedState || props.notified ? 'notified' : ''}`
+                    ${resProps.waitState || resProps.waiting ? 'waiting' : ''} 
+                    ${resProps.notifiedState || resProps.notified ? 'notified' : ''}`
             }
-            key={props.id}
+            key={key}
+            style={props}
         >
-            <span className='res_name'>{props.guest_name}</span>
-            <span className='res_party'>{props.party_size} ppl</span>
-            <span className='res_notes'>{props.notes}</span>
+            {resProps.resizeListener}
+            <span className='res_name'>{resProps.guest_name}</span>
+            <span className='res_party'>{resProps.party_size} ppl</span>
+            <span className='res_notes'>{resProps.notes}</span>
             <span className='fa_icons'>
                 <FontAwesomeIcon
                     icon='ellipsis-h'
                     className='fa_elli'
-                    onClick={() => props.setEditView(!props.editView)}
+                    onClick={() => resProps.setEditView(!resProps.editView)}
                 />
             </span>
-        </li>
+        </animated.li>
     )
 }

@@ -21,6 +21,11 @@
     background-color: #F4F1DE;
 }
 
+.opened_form {
+    color: #3D405B;
+    background-color: #F4F1DE;
+}
+
 .addRes_button:focus {
     color: #3D405B;
     background-color: #F4F1DE;

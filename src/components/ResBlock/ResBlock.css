@@ -3,3 +3,11 @@
     padding: 0;
     margin: 5px;
 }
+
+.fa_closeWindow {
+    position: relative;
+    float: right;
+    right: 5px;
+    top: 5px;
+    z-index: 5;
+}

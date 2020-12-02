@@ -5,7 +5,7 @@ import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
 import NumberFormat from 'react-number-format';
 import { useContext, useRef, useState } from "react";
-import { animated, useSpring } from "react-spring";
+import { animated, config, useSpring } from "react-spring";
 
 export default function AddResForm(props) {
 
@@ -17,7 +17,8 @@ export default function AddResForm(props) {
     }
 
     const animateProps = useSpring({
-        marginTop: props.openForm ? 0 : -1000
+        marginTop: props.openForm ? 0 : -550,
+        config: config.gentle
     })
 
     const handleSubmit = ev => {

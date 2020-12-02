@@ -8,13 +8,15 @@ export default function AddResButton() {
     const [openForm, setOpenForm] = useState(false)
 
     return (
-        <div className='addRes_button'>
-            <div className='cursor_hover'>
+        <div className={`
+            addRes_button
+            ${!openForm ? '' : 'opened_form'}
+        `}>
+            <div className='cursor_hover' onClick={() => setOpenForm(!openForm)}>
                 <FontAwesomeIcon
                     icon='plus'
                     size='3x'
                     className='fa_addResButton'
-                    onClick={() => setOpenForm(!openForm)}
                 />
             </div>
             <AddResForm

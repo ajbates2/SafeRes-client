@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import phone from "phone";
 import { useContext } from "react";
 import ResiContext from "../../contexts/reservationContext";
@@ -10,11 +9,6 @@ export default function EditResButtons(props) {
 
     return (
         <div className='editRes_buttons'>
-            <FontAwesomeIcon
-                icon='times'
-                className='fa_closeWindow cursor_hover'
-                onClick={() => props.changeView()}
-            />
             <button
                 className='editRes_noShow editRes_button cursor_hover'
                 onClick={() => {

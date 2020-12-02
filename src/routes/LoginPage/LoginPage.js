@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import './LoginPage.css'
@@ -80,6 +79,7 @@ export default function LoginPage(props) {
                     <a href='https://github.com/ajbates2/'
                         className='gitHub_link'
                         target='_blank'
+                        rel="noreferrer"
                     >
                         <FontAwesomeIcon
                             icon={["fab", "github-alt"]}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
+import HeaderMenu from './HeaderMenu'
 
 export default function Header() {
 
@@ -22,16 +22,10 @@ export default function Header() {
                 size='2x'
                 onClick={() => setMenuOpen(!menuOpen)}
             />
-            {(!menuOpen) ?
-                null :
-                <Link
-                    className='header_menu cursor_hover rich_black_font dark_blue_gray'
-                    onClick={() => handleLogoutClick()}
-                    to='/'
-                >
-                    logout
-                </Link>
-            }
+            <HeaderMenu
+                logout={() => handleLogoutClick()}
+                menuOpen={menuOpen}
+            />
         </header>
     )
 }

@@ -26,21 +26,29 @@
 
 .header_menu {
     position: absolute;
-    right: 0;
     top: 81px;
     padding: 1rem;
     width: 115px;
     margin: 0 10px;
-    text-align: end;
-    z-index: 10;
-    text-decoration: none;
+    z-index: 5;
     box-shadow: 3px 4px 13px 0px #101319;
     color: #ced2de;
+    text-align: end;
+}
+
+.header_menu_item {
+    text-decoration: none;
+    margin: 10px 5px;
+    color: #ced2de;
+}
+
+.header_menu_item:hover {
+    color: #101319;
 }
 
 .header_menu:hover {
     background-color: #E07A5F;
-    color: #3D405B;
+    color: #101319;
 }
 
 @media only screen and (max-width: 400px) {
