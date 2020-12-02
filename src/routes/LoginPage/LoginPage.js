@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import './LoginPage.css'
@@ -29,25 +31,26 @@ export default function LoginPage(props) {
 
     return (
         <div className='login_page'>
+
             <header className='login_header'>
                 <h1>SafeRes</h1>
             </header>
             <main>
-                <form
-                    className='login_form'
-                    onSubmit={handleSubmitJwtAuth}
-                >
-                    <h2>Login</h2>
-                    <label htmlFor='email'>Email</label>
-                    <input id='email' name='email' type='text' required />
-                    <label htmlFor='password'>password</label>
-                    <input id='password' name='password' type='password' required />
-                    <button type='submit' className='cursor_hover'>Login</button>
-                    <div role='alert'>
-                        {error.error && <p className='red'>{error.error}</p>}
-                    </div>
-                </form>
-                <div className='demo_creds'>
+                <div className='photo_container'>
+                    <form
+                        className='login_form'
+                        onSubmit={handleSubmitJwtAuth}
+                    >
+                        <h2>Login</h2>
+                        <input id='email' placeholder='email' name='email' type='text' required />
+                        <input id='password' placeholder='password' name='password' type='password' required />
+                        <input type='submit' value='log in' className='cursor_hover' />
+                        <div role='alert'>
+                            {error.error && <p className='red'>{error.error}</p>}
+                        </div>
+                    </form>
+                </div>
+                <div className='demo_creds rich_black_font'>
                     <h3>Demo account Creds</h3>
                     <p>
                         email: foo@bar.com<br />
@@ -59,7 +62,7 @@ export default function LoginPage(props) {
                     </p>
                 </div>
             </main>
-            <footer>
+            <footer className="independence">
                 <h3>About</h3>
                 <p>
                     SafeRes is an app designed to help restaurants manage there daily reservations, as well
@@ -73,6 +76,18 @@ export default function LoginPage(props) {
                     Since you have to set up text messaging for every account, and the fact that this app uses
                     sensitive data, account creation is not active at this time.
                 </p>
+                <div className="repo_icons">
+                    <a href='https://github.com/ajbates2/'
+                        className='gitHub_link'
+                        target='_blank'
+                    >
+                        <FontAwesomeIcon
+                            icon={["fab", "github-alt"]}
+                            className='gitHub_alt'
+                            size='4x'
+                        />
+                    </a>
+                </div>
             </footer>
         </div>
     )

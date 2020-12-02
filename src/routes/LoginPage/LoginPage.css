@@ -1,15 +1,29 @@
+.login_page {
+    background:
+    linear-gradient(#414562, #292B3D) no-repeat,
+    linear-gradient(#292B3D, #414562 ) no-repeat;
+    height: 100vh;
+}
 .login_form {
-    background: gray;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-gap: 16px;
     margin: 0 auto;
-    width: fit-content;
+    width: 450px;
+    box-shadow: 0px 0px 50px #101218;
+    background:
+    linear-gradient(#414562, #292B3D) no-repeat,
+    linear-gradient(#292B3D, #414562 ) no-repeat;
+    padding: 50px;
 }
 
+.login_form input {
+    padding: 10px;
+    width: -webkit-fill-available;
+    margin: 7px;
+    border: 0;
+    box-shadow: 0px 0px 15px rgb(16 18 24 / .4);
+    background-color: #ced2de;
+}
 .login_form h2 {
-    grid-column: 1 / span 3;
-    justify-self: center;
+    text-align: center;
 }
 
 label {
@@ -27,22 +41,47 @@ button {
 
 .login_header {
     text-align: center;
+    font-family: 'Pacifico', cursive;
+    filter: drop-shadow(0px 3px 1px #101218);
+    color: #E07A5F;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
 }
 
 .demo_creds {
-    background: lightgray;
+    background: linear-gradient(#E07A5F, #AB3F21);
     text-align: center;
-    margin-top: 40px;
     padding: 50px;
+    padding: 10vh 10vw;
+    filter: drop-shadow(0px 2px 20px #101319);
 }
 
 footer {
-    background: darkgray;
+    background: linear-gradient(#3D405B, #181A25);
     width: 100%;
-    padding: 50px;
+    padding: 10vh 20vw;
     text-align: center;
 }
 
 .demo_info {
     font-style: italic;
+    margin-top: 100px;
+}
+
+.photo_container {
+    background-image: url("tables.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    padding-top: 250px;
+}
+
+.gitHub_link {
+    color: #E07A5F;
+}
+
+.gitHub_alt {
+    margin: 100px;
 }

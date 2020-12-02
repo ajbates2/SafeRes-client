@@ -4,19 +4,18 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBell, faEllipsisH, faTimes, faPlusSquare, faCheck, faBars, faUserPlus, faAddressBook, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faEllipsisH, faTimes, faCheck, faBars, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ResListProvider } from './contexts/reservationContext';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
   faBell,
   faEllipsisH,
   faTimes,
-  faPlusSquare,
   faCheck,
   faBars,
-  faUserPlus,
-  faAddressBook,
-  faPlus
+  faPlus,
+  faGithubAlt
 )
 
 ReactDOM.render(
