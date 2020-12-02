@@ -1,6 +1,6 @@
 # SafeRes
 
-A tip tracking app for people working in the service industry.
+A reservation app to help restaurants responsibly contact trace there guests
 
 <a href="https://safe-res-client.vercel.app/">Live Site</a>
 
