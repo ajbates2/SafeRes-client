@@ -7,7 +7,7 @@ import HeaderMenu from './HeaderMenu'
 export default function Header() {
 
 
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [dropdown, setDropdown] = useState(false)
 
     const handleLogoutClick = () => {
         TokenService.clearAuthToken()
@@ -20,11 +20,11 @@ export default function Header() {
                 icon='bars'
                 className='header_menu_button cursor_hover'
                 size='2x'
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => setDropdown(!dropdown)}
             />
             <HeaderMenu
                 logout={() => handleLogoutClick()}
-                menuOpen={menuOpen}
+                dropdown={dropdown}
             />
         </header>
     )

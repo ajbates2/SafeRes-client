@@ -5,7 +5,9 @@ import ListHeader from "../../components/ListHeader/ListHeader";
 import TimeBlock from "../../components/TimeBlock/TimeBlock";
 import ResiContext from "../../contexts/reservationContext";
 import SafeResAPIService from "../../services/res-api-service";
+import useResizeAware from 'react-resize-aware';
 import './ReservationPage.css'
+import ResToast from "../../components/ResToast/ResToast";
 
 export default function ReservationPage(props) {
   const resContext = useContext(ResiContext)
@@ -24,18 +26,27 @@ export default function ReservationPage(props) {
     )
   }
 
+  const [pageSizeListener, pageSize] = useResizeAware()
+  const [listSizeListener, listSize] = useResizeAware()
+
   const shortenedList = dedupeByKey(resContext.resList, 'res_time')
+
+  const pageHeight = Number(pageSize.height)
+  const listHeight = Number(listSize.height)
 
   return (
     <div className={`
       res_page
-      ${(resContext.resList.length <= 2) ? 'short_list' : ''}
-      ${(resContext.resList.length < 5) ? 'page_height' : ''}
-      ${(resContext.resList.length <= 7) ? 'big_screen' : ''}
     `}
+      style={{
+        height: `${(pageHeight > listHeight) ? '100vh' : 'auto'}`,
+        marginBottom: `${listHeight === 700 ? '150px' : ''}`
+      }}
     >
-      <Header />
-      <main className='reservations'>
+      { pageSizeListener}
+      < Header />
+      <main className='reservations' style={{ position: 'relative' }}>
+        {listSizeListener}
         <ListHeader />
         {shortenedList.map(block => {
           return (
@@ -47,7 +58,8 @@ export default function ReservationPage(props) {
           )
         })}
       </main>
+      <ResToast />
       <DailyStats />
-    </div>
+    </div >
   );
 }

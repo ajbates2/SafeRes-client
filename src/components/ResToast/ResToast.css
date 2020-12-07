@@ -1,0 +1,10 @@
+.toast {
+    position: fixed;
+    margin: 10px auto;
+    right: 5%;
+    left: 5%;
+    max-width: 400px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 3px 2px 20px 5px #101218;
+}

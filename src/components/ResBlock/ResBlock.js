@@ -13,6 +13,7 @@ export default function ResBlock(props) {
     const [waitState, setWaitState] = useState(false)
     const [notifiedState, setNotifiedState] = useState(false)
 
+
     const [resizeListener, sizes] = useResizeAware()
 
     const spring = useSpring({

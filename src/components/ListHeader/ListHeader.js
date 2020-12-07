@@ -6,6 +6,8 @@ import moment from 'moment'
 export default function ListHeader() {
     const decodeAuth = jwt.verify(TokenService.getAuthToken(), "its-corona-time")
 
+    // console.log(moment().format('DDDD WW YYYY E'))
+
     return (
         <div className='listHeader_container light_periwinkle_font'>
             <p>{decodeAuth.restaurant_name}</p>

@@ -26,6 +26,7 @@
 
 .header_menu {
     position: absolute;
+    right: 0;
     top: 81px;
     padding: 1rem;
     width: 115px;
@@ -34,6 +35,10 @@
     box-shadow: 3px 4px 13px 0px #101319;
     color: #ced2de;
     text-align: end;
+}
+
+.hide_menu {
+    display: none;
 }
 
 .header_menu_item {

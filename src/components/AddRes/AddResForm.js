@@ -18,6 +18,7 @@ export default function AddResForm(props) {
 
     const animateProps = useSpring({
         marginTop: props.openForm ? 0 : -550,
+        opacity: props.openForm ? 1 : 0,
         config: config.gentle
     })
 

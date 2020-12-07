@@ -15,7 +15,6 @@ body {
   background:
       linear-gradient(#414562, #292B3D) no-repeat,
       linear-gradient(#292B3D, #414562 ) no-repeat;
-  overflow-x: hidden;
 }
 
 code {
