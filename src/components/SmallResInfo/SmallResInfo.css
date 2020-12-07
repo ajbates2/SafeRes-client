@@ -9,21 +9,26 @@
 .res_name {
     grid-column: 1;
     justify-self: start;
+    align-self: center;
 }
 
 .res_party {
     grid-column: 2;
     justify-self: start;
+    align-self: center;
 }
 
 .res_notes {
     grid-column: 3;
     justify-self: start;
+    align-self: center;
 }
 
-.fa_icons {
+.fa_elli {
     grid-column: 4;
     justify-self: flex-end;
+    align-self: center;
+    font-size: 25px;
 }
 
 .waiting {

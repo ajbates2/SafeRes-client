@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import './AddRes.css'
 import ResiContext from "../../contexts/reservationContext";
@@ -6,6 +5,7 @@ import SafeResAPIService from "../../services/res-api-service";
 import NumberFormat from 'react-number-format';
 import { useContext, useRef, useState } from "react";
 import { animated, config, useSpring } from "react-spring";
+import { FiX } from 'react-icons/fi'
 
 export default function AddResForm(props) {
 
@@ -42,8 +42,7 @@ export default function AddResForm(props) {
 
     return (
         <animated.div style={animateProps} className='addRes_container terracotta'>
-            <FontAwesomeIcon
-                icon='times'
+            <FiX
                 className='fa_closeAddRes cursor_hover'
                 onClick={() => props.setOpenForm()}
             />
@@ -69,7 +68,7 @@ export default function AddResForm(props) {
                     required
                 />
                 <NumberFormat
-                    displayType={'tel'}
+                    type={'tel'}
                     name='phone_number'
                     id='phone_number'
                     placeholder='123-456-7890'

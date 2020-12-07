@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TokenService from '../../services/token-service'
 import HeaderMenu from './HeaderMenu'
+import { FiMenu } from 'react-icons/fi'
 
 export default function Header() {
 
@@ -16,10 +16,9 @@ export default function Header() {
     return (
         <header className='main_header'>
             <h1 className='app_title'>SafeRes</h1>
-            <FontAwesomeIcon
+            <FiMenu
                 icon='bars'
                 className='header_menu_button cursor_hover'
-                size='2x'
                 onClick={() => setDropdown(!dropdown)}
             />
             <HeaderMenu

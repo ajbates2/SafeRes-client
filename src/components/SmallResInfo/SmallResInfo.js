@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './SmallResInfo.css'
 import { animated, useTransition } from "react-spring";
+import { FiMoreHorizontal } from "react-icons/fi";
 
 export default function SmallResInfo(resProps) {
 
@@ -28,13 +28,10 @@ export default function SmallResInfo(resProps) {
             <span className='res_name'>{resProps.guest_name}</span>
             <span className='res_party'>{resProps.party_size} ppl</span>
             <span className='res_notes'>{resProps.notes}</span>
-            <span className='fa_icons'>
-                <FontAwesomeIcon
-                    icon='ellipsis-h'
-                    className='fa_elli'
-                    onClick={() => resProps.setEditView(!resProps.editView)}
-                />
-            </span>
+            <FiMoreHorizontal
+                className='fa_elli'
+                onClick={() => resProps.setEditView(!resProps.editView)}
+            />
         </animated.li>
     )
 }

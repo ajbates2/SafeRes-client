@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import './AddRes.css'
 import AddResForm from "./AddResForm";
+import { FiPlus } from 'react-icons/fi'
 
 export default function AddResButton() {
 
@@ -13,9 +13,7 @@ export default function AddResButton() {
             ${!openForm ? '' : 'opened_form'}
         `}>
             <div className='cursor_hover' onClick={() => setOpenForm(!openForm)}>
-                <FontAwesomeIcon
-                    icon='plus'
-                    size='3x'
+                <FiPlus
                     className='fa_addResButton'
                 />
             </div>

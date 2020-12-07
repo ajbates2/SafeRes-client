@@ -65,7 +65,7 @@ export default function EditResForm(props) {
                 required
             />
             <NumberFormat
-                displayType={'tel'}
+                type={'tel'}
                 name='phone_number'
                 id='phone_number'
                 defaultValue={props.phone_number}

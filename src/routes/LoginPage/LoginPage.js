@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaGithub } from "react-icons/fa";
 import React, { useState } from "react";
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
@@ -81,10 +81,8 @@ export default function LoginPage(props) {
                         target='_blank'
                         rel="noreferrer"
                     >
-                        <FontAwesomeIcon
-                            icon={["fab", "github-alt"]}
+                        <FaGithub
                             className='gitHub_alt'
-                            size='4x'
                         />
                     </a>
                 </div>

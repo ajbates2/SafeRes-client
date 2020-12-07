@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { animated, config, useSpring } from "react-spring";
 import EditRes from "../EditRes/EditRes";
 import SmallResInfo from '../SmallResInfo/SmallResInfo'
 import useResizeAware from 'react-resize-aware';
 import './ResBlock.css'
+import { FiX } from 'react-icons/fi'
 
 export default function ResBlock(props) {
 
@@ -39,8 +39,7 @@ export default function ResBlock(props) {
                     {...props}
                 />
                 : <>
-                    <FontAwesomeIcon
-                        icon='times'
+                    <FiX
                         className='fa_closeWindow cursor_hover'
                         onClick={() => setEditView(!editView)}
                     />

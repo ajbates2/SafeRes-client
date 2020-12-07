@@ -43,7 +43,7 @@ I wanted a way to contact everyone that was at our restaurant on a day they may 
 * Moment.js
 * HTML5
 * Vanilla CSS3
-* FontAwesome (icons)
+* React-icons
 * React spring
 
 #### Testing
