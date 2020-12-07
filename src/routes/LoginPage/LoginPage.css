@@ -16,7 +16,7 @@
 
 .login_form input {
     padding: 10px;
-    width: -webkit-fill-available;
+    width: 100%;
     margin: 7px;
     border: 0;
     box-shadow: 0px 0px 15px rgb(16 18 24 / .4);
