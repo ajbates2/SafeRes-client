@@ -56,8 +56,7 @@ export default function LoginPage(props) {
                         password: password
                     </p>
                     <p className='demo_info'>
-                        ***Text messaging won't be active for the demo account being that you need a paid account to send
-                        messages to all numbers***
+                        ***Text messaging is active, but I am paying for it out of pocket. It's not that expensive, but please don't go crazy.***
                     </p>
                 </div>
             </main>
