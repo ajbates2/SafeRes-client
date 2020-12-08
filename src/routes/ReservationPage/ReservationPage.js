@@ -48,15 +48,18 @@ export default function ReservationPage(props) {
       <main className='reservations' style={{ position: 'relative' }}>
         {listSizeListener}
         <ListHeader />
-        {shortenedList.map(block => {
-          return (
-            <TimeBlock
-              key={block.res_time}
-              resi={resContext.resList}
-              time={block.res_time}
-            />
-          )
-        })}
+        {resContext.resList.length === 0
+          ? <div className='empty_list'>might be a long day...
+          </div>
+          : shortenedList.map(block => {
+            return (
+              <TimeBlock
+                key={block.res_time}
+                resi={resContext.resList}
+                time={block.res_time}
+              />
+            )
+          })}
       </main>
       <ResToast />
       <DailyStats />

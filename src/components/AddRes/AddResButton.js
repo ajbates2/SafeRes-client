@@ -10,7 +10,7 @@ export default function AddResButton() {
     return (
         <div className={`
             addRes_button
-            ${!openForm ? '' : 'opened_form'}
+            ${!openForm ? 'closed_form' : 'opened_form'}
         `}>
             <div className='cursor_hover' onClick={() => setOpenForm(!openForm)}>
                 <FiPlus

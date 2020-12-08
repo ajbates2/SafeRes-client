@@ -90,3 +90,24 @@ footer p {
     margin-top: 100px;
     font-size: 65px;
 }
+
+.loading_spinner {
+    font-size: 70px;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    margin: auto;
+    animation: Loading-spin infinite 3s linear;
+}
+
+@keyframes Loading-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

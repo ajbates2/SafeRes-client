@@ -17,9 +17,9 @@
     color: #F4F1DE;
 }
 
-.addRes_button:hover {
-    color: #3D405B;
-    background-color: #F4F1DE;
+.closed_form {
+    background-color: #E07A5F;
+    color: #F4F1DE;
 }
 
 .opened_form {
@@ -63,12 +63,6 @@
 
 .walk_in_button {
     margin: 7px;
-}
-
-.walk_in_button:hover {
-    background-color: #FD2B3B;
-    color: #101218;
-    outline: 0;
 }
 
 .add_res_submit {
