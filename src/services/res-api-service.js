@@ -27,6 +27,7 @@ const SafeResAPIService = {
             )
     },
     postNewResi(guest_name, phone_number, party_size, res_time, walk_in, notes, res_date) {
+        party_size = Number(party_size)
         return fetch(`${config.API_ENDPOINT}/res`, {
             method: 'POST',
             headers: {
@@ -61,7 +62,7 @@ const SafeResAPIService = {
             .then(res =>
                 (!res.ok)
                     ? res.json().then(e => {
-                        return { error: e.message }
+                        return { status: e.message }
                     })
                     : res.json()
             )

@@ -13,7 +13,7 @@ export default function EditResButtons(props) {
                 className='editRes_noShow editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestNoShow(props.id)
-                        .then(res => resetContext.handleSetToast(res.status))
+                        .then(res => resetContext.handleSetToast(res.message))
                         .then(() => {
                             resetContext.setReset(!resetContext.resetList)
                             props.checkOff()
@@ -26,7 +26,7 @@ export default function EditResButtons(props) {
                 className='editRes_cancel editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestCancelled(props.id)
-                        .then(res => resetContext.handleSetToast(res.status))
+                        .then(res => resetContext.handleSetToast(res.message))
                         .then(() => {
                             resetContext.setReset(!resetContext.resetList)
                             props.checkOff()
@@ -39,7 +39,7 @@ export default function EditResButtons(props) {
                 className='editRes_waitState editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestWaiting(props.id)
-                        .then(res => resetContext.handleSetToast(res.status))
+                        .then(res => resetContext.handleSetToast(res.message))
                         .then(() => {
                             props.setWaitState()
                             props.changeView()
@@ -52,7 +52,7 @@ export default function EditResButtons(props) {
                 className='editRes_notify editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.notifySms(phone(props.phone_number)[0], props.guest_name, props.id)
-                        .then(res => resetContext.handleSetToast(res.status))
+                        .then(res => resetContext.handleSetToast(res.message))
                         .then(() => {
                             props.changeView()
                             props.setNotifiedState()
@@ -65,7 +65,7 @@ export default function EditResButtons(props) {
                 className='editRes_checkOff editRes_button cursor_hover'
                 onClick={() => {
                     SafeResAPIService.updateGuestArrived(props.id)
-                        .then(res => resetContext.handleSetToast(res.status))
+                        .then(res => resetContext.handleSetToast(res.message))
                         .then(() => {
                             resetContext.setReset(!resetContext.resetList)
                             props.checkOff()
